@@ -1,12 +1,26 @@
 
-<div class="row">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
+
+<div class="cards">
   <% @lists.each do |list| %>
-    <div class="co-12 col-sm-6 col-md-4">
       <%=link_to list_path(list) do %>
-          <li><%= list.name %></li>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <h2><%= list.name %></h2>
+        </div>
       <% end %>
-    </div>
   <% end %>
 </div>
 
 <%= link_to 'Create a movie list', new_list_path, class: "btn btn-flat" %>
+
+<%= cl_image_tag("qezsjvdk0i6zq33xaw3m",
+      width: 400, height: 300, crop: :fill) %>
+<%= cl_image_tag("bty7nvuwupc4npihuvkn",
+width: 150, height: 150, crop: :thumb, gravity: :face) %>
